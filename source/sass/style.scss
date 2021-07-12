@@ -1,3 +1,18 @@
-h1 {
-  color: red;
+// blocks
+@import "blocks/header.scss";
+@import "blocks/top.scss";
+// global
+@import "global/normalize.scss";
+@import "global/variables.scss";
+
+html {
+  font-family: Open Sans;
+  font-style: normal;
+}
+.visibility-hidden {
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  width: 0;
 }

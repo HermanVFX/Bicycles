@@ -1,0 +1,174 @@
+.top {
+    background-image: url(../img/bike-top.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 825px;
+    &__wrapper{
+        padding-top: 325px;
+        max-width: 880px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: auto;
+        color: $white;
+    }    
+    &__title {
+        max-width: 393px;
+        position: relative;
+        h2 {
+            font-weight: bold;
+            font-size: 46px;
+            line-height: 64px;
+            letter-spacing: -0.005em;
+            margin-top: 43px;
+            margin-bottom: 25px;
+        }
+        p {
+            font-size: 20px;
+            line-height: 32px;
+            letter-spacing: -0.005em;
+            color: $white;
+            mix-blend-mode: normal;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+        &::after {
+            position: absolute;
+            top: -7px;
+            left: 0;
+            content: '';
+            width: 67.6px;
+            height: 20.28px;
+            background-image: url(../img/logo.svg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    &__form {
+        margin-top: -19px;
+        max-width: 327px;
+        display: flex;
+        flex-direction: column;
+        p {
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 28px;
+            text-align: center;
+            letter-spacing: -0.005em;
+            color: $white;
+            mix-blend-mode: normal;
+            margin-bottom: 17.9px;
+        }
+    }
+    &__form-input {
+        background: $white;
+        border: 1px solid $gray-light;
+        box-sizing: border-box;
+        border-radius: 6px;
+        padding: 14px 29px 10px 29px;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 24px;
+        color: $gray-darck;
+        margin-bottom: 17.5px;
+    }
+    &__form-button {
+        height: 51px;
+        padding-top: 10px;
+        background: $green;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 21px;
+        color: $black;
+        border: none;
+    }
+}
+@media (max-width:$tablet-width) {
+    .top {
+        background-image: none;
+        margin-top: -50px;
+        z-index: -1;
+        &__wrapper{
+            padding-top: 0px;
+            max-width: 1439px;
+        }    
+        &__title {
+            max-width: 1439px;
+            height: 340px;
+            width: 100%;
+            text-align: center;
+            background-image: url(../img/bike-top.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            h2 {
+                margin-top: 135px;
+                margin-bottom: 20px;
+                font-size: 30px;
+                line-height: 42px;
+            }
+            p {
+                font-size: 18px;
+                line-height: 32px;
+                max-width: 435px;
+                margin: auto;
+            }
+            &::after {
+                background-image: none;
+            }
+        }
+        &__form {
+            max-width: 321px;
+            margin: 52px auto 0px auto;
+            display: flex;
+            flex-direction: column;
+            p {
+                font-size: 18px;
+                line-height: 28px;
+                margin-bottom: 30px;
+                color: $black;
+            }
+        }
+        &__form-input {
+            padding: 12px 21px 12px 21px;
+        }
+        &__form-button {
+            height: 51px;
+            padding-top: 7px;
+            background: $green;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 21px;
+            color: $black;
+            border: none;
+        }
+    }
+}
+@media (max-width:$mobile-width) {
+    .top {
+        &__title {
+            height: 390px;
+            background-image: url(../img/bike-top-mobile.jpg);
+            h2 {
+                margin-top: 126px;
+                margin-bottom: 20px;
+            }
+            p {
+                max-width: 288px;
+            }
+        }
+        &__form {
+            max-width: 286.35px;
+            margin: 57px auto 0px auto;
+            p {
+                margin-bottom: 19px;
+            }
+        }
+
+    }
+}
