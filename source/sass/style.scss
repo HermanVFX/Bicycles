@@ -5,26 +5,23 @@
 @import "blocks/header.scss";
 @import "blocks/contacts.scss";
 @import "blocks/top.scss";
+@import "blocks/about.scss";
+@import "blocks/bicycles.scss";
+@import "blocks/video.scss";
 
 .section-head {
   text-align: center;
   font-weight: 600;
-  font-size: 30px;
-  line-height: 30px;
-  letter-spacing: -0.005em;
-  color: #1F1F1F;
 }
 .section-title {
-  font-size: 17px;
-  line-height: 31px;
   text-align: center;
-  color: rgba(0, 0, 0, 0.7);
   margin-left: auto;
   margin-right: auto;
 }
 html {
   font-family: Open Sans;
   font-style: normal;
+  scroll-behavior: smooth;
 }
 .visibility-hidden {
   visibility: hidden;

@@ -23,10 +23,10 @@
       <nav class="header__menu">
         <button class="header__menu-button">Открыть меню</button>
         <ul class="header__menu-list">
-          <li class="header__menu-item"><a href="#">О нас</a></li>
-          <li class="header__menu-item"><a href="#">Виды велосипедов</a></li>
-          <li class="header__menu-item"><a href="#">Видео про велосипеды</a></li>
-          <li class="header__menu-item"><a href="#">Контакты</a></li>
+          <li class="header__menu-item"><a href="#about">О нас</a></li>
+          <li class="header__menu-item"><a href="#bicycles">Виды велосипедов</a></li>
+          <li class="header__menu-item"><a href="#video">Видео про велосипеды</a></li>
+          <li class="header__menu-item"><a href="#contacts">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -62,43 +62,52 @@
 
      <!-- О нас -->
 
-     <section class="about">
+     <section class="about" id="about">
       <h2 class="about__head section-head">Несколько фактов о нас</h2>
 
       <ul class="about__list">
-        <ul class="about__item">
+        <li class="about__item">
           <strong>01</strong>
           <p>Самый широкий выбор велосипедов!</p>
-        </ul>
-        <ul class="about__item">
+        </li>
+        <li class="about__item">
           <strong>02</strong>
           <p>Доставка велосипедов по всей России!</p>
-        </ul>
-        <ul class="about__item">
+        </li>
+        <li class="about__item">
           <strong>03</strong>
           <p>Большой выбор крутых аксессуаров!</p>
-        </ul>
-        <ul class="about__item">
+        </li>
+        <li class="about__item">
           <strong>04</strong>
           <p>Профессиональные консультации!</p>
-        </ul>
-      </ul>
-    </section>
+        </li>
+      
+    </ul></section>
 
     <!-- Виды велосипелов -->
     
-    <section class="bicycles">
+    <section class="bicycles" id="bicycles">
       <h2 class="bicycles__head section-head">Виды велосипелов</h2>
       <div class="bicycles__photos-block">
-        <img src="" alt="" class="bicycles__photo">
-        <img src="" alt="" class="bicycles__photo">
-        <img src="" alt="" class="bicycles__photo">
+        <div class="bicycles__photo">
+          <img src="img/bike-list-01.jpg" alt="Дорожный велосипед" height="503" width="342">
+          <p>Дорожный велосипед</p>
+        </div>
+        <div class="bicycles__photo">
+          <img src="img/bike-list-02.jpg" alt="Горный велосипед" height="566" width="342">
+          <p>Горный велосипед</p>
+        </div>
+        <div class="bicycles__photo">
+          <img src="img/bike-list-03.jpg" alt="Детский велосипед" height="512.59" width="342">
+          <p>Детский велосипед</p>
+        </div>
       </div>      
     </section>
 
     <!-- Видео про велосипеды -->
 
-    <section class="video">
+    <section class="video" id="video">
       <h2 class="video__head section-head">Видео про велосипеды</h2>
       <p class="video__title section-title">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя. </p>
 
@@ -116,7 +125,7 @@
   <footer class="footer">
     <!-- Контакты -->
 
-    <div class="footer__contacts contacts">
+    <div class="footer__contacts contacts" id="contacts">
       <h2 class="contacts__head section-head">Как нас найти?</h2>
       <p class="contacts__title section-title">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
 

@@ -1,0 +1,213 @@
+.bicycles {
+    background-color:#F6F7F9;
+    padding-top: 119px;
+    padding-bottom: 127px;
+    margin-top: 130px;
+    &__head {
+        margin-bottom: -6px;
+        font-size: 30px;
+    }
+    &__photos-block {
+        max-width: 1126px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 34px;
+        text-align: center;
+        letter-spacing: -0.5px;
+    }
+    &__photo {
+        position: relative;
+        p {
+            margin-top: 11px;
+        }
+        &:first-child {
+            margin-top: 61px;
+            img {
+                z-index: 2;
+                position: relative;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-image: url(../img/ellipse-1.svg);
+                width: 180px;
+                height: 180px;
+                z-index: 1;
+                left: -60px;
+                top: 156px;
+            }
+        }
+        &:nth-child(2n) {
+            margin-top: 90px;
+            img {
+                position: relative;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-image: url(../../img/rectangle-1.svg);
+                width: 47px;
+                height: 47px;
+                top: -19px;
+                left: -20px;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-image: url(../../img/rectangle-2.svg);
+                width: 47px;
+                height: 47px;
+                right: -23px;
+                bottom: 53px;
+                z-index: 1;
+            }
+            
+        }
+        &:last-child {
+            margin-top: 51px;
+            img {
+                position: relative;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-image: url(../img/ellipse-2.svg);
+                width: 95px;
+                height: 95px;
+                top: -33px;
+                right: -36px;
+            }
+        }
+    }
+}
+@media (max-width:$tablet-width) {
+    .bicycles {
+        margin-top: 24px;
+        padding-top: 35px;
+        padding-bottom: 48px;
+        &__photos-block {
+            max-width: 590px;
+            justify-content: center;
+        }
+        &__photos-block {
+            margin-top: 4px;
+        }
+        &__photo {
+            position: relative;
+            p {
+                margin-top: 11px;
+            }
+            &:first-child {
+                margin-top: 30px;
+                margin-right: 25px;
+                img {
+                    border-radius: 10px;
+                    width: 270px;
+                    height: 300px;
+                    object-fit: cover;
+                }
+                &::after {
+                    width: 127px;
+                    height: 127px;
+                    z-index: 1;
+                    left: -38px;
+                    top: 202px;
+                }
+            }
+            &:nth-child(2n) {
+                margin-top: 30px;
+                margin-left: 25px;
+                img {
+                    border-radius: 10px;
+                    width: 270px;
+                    height: 300px;
+                    object-fit: cover;
+                }
+                &::after {
+                    visibility: hidden;
+                }
+                &::before {
+                    visibility: hidden;
+                }
+                
+            }
+            &:last-child {
+                margin-top: 30px;
+                img {
+                    border-radius: 10px;
+                    width: 270px;
+                    height: 300px;
+                    object-fit: cover;
+                }
+                &::after {
+                    width: 68px;
+                    height: 68px;
+                    top: -21px;
+                    right: -25px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:$mobile-width) {
+    .bicycles {
+        padding-top: 34px;
+        padding-bottom: 32px;
+        margin-top: 35px;
+        &__head {
+            margin-bottom: 0px;
+        }
+        &__photos-block {
+            max-width: 320px;
+            margin: 4px auto auto auto;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__photo {
+            width: 270px;
+            margin: auto;
+            p {
+                margin-top: 11px;
+            }
+            &:first-child {
+                img {
+                    z-index: 2;
+                    position: relative;
+                }
+                &::after {
+                    left: -25px;
+                    top: 202px;
+                }
+            }
+            &:nth-child(2n) {
+                margin-top: 21px; 
+            }
+            &:last-child {
+                margin-top: 22px;
+                img {
+                    position: relative;
+                }
+                &::after {
+                    top: -21px;
+                    right: -14px;
+                }
+            }
+        }
+    }
+}
