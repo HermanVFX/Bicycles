@@ -7,11 +7,11 @@
   <title>MOON | Велосипеды</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
+<body class="page">
 
   <!-- Шапка сайта -->
 
-  <header class="header">
+  <header class="page__header header">
     <div class="header__wrapper">
 
       <!-- Логотип -->
@@ -31,7 +31,7 @@
       </nav>
     </div>
   </header>
-  <main class="main">
+  <main class="page__main main">
 
     <!-- Заголовок -->
 
@@ -50,19 +50,19 @@
 
         <!-- Форма -->
 
-        <form action="#" class="top__form">
+        <form class="top__form" id="top-form">
           <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
-          <input name="name" class="top__form-input" type="text" placeholder="Введите Ваше Имя">
-          <input name="phone" class="top__form-input" type="tel" placeholder="Введите Ваш номер телефона">
-          <button class="top__form-button">Подобрать велосипед мечты</button>
+          <input name="name" class="top__form-input" id="name" type="text" placeholder="Введите Ваше Имя" required="">
+          <input name="phone" class="top__form-input" id="phone" type="tel" placeholder="Введите Ваш номер телефона" required="">
+          <button class="top__form-button" type="submit" form="top-form" onclick="contactSaveLocalStorage()">Подобрать велосипед мечты</button>
         </form>
       </div>
-      
+
     </section>
 
-     <!-- О нас -->
+    <!-- О нас -->
 
-     <section class="about" id="about">
+    <section class="about" id="about">
       <h2 class="about__head section-head">Несколько фактов о нас</h2>
 
       <ul class="about__list">
@@ -86,7 +86,7 @@
     </ul></section>
 
     <!-- Виды велосипелов -->
-    
+
     <section class="bicycles" id="bicycles">
       <h2 class="bicycles__head section-head">Виды велосипелов</h2>
       <div class="bicycles__photos-block">
@@ -102,7 +102,7 @@
           <img src="img/bike-list-03.jpg" alt="Детский велосипед" height="512.59" width="342">
           <p>Детский велосипед</p>
         </div>
-      </div>      
+      </div>
     </section>
 
     <!-- Видео про велосипеды -->
@@ -122,7 +122,7 @@
 
   <!-- Подвал сайта -->
 
-  <footer class="footer">
+  <footer class="page__footer footer">
     <!-- Контакты -->
 
     <div class="footer__contacts contacts" id="contacts">
@@ -141,7 +141,7 @@
       </div>
     </div>
   </footer>
-  
+
   <script src="js/script.js"></script>
 </body>
 </html>
