@@ -12,10 +12,12 @@ menuBtn.addEventListener('click', function () {
   if (menu.classList.contains('header__menu--close')) {
     menu.classList.remove('header__menu--close');
     menu.classList.add('header__menu--open');
+    menuBtn.style.background = 'url(img/menu-close.svg) #ffffff center no-repeat';
     page.classList.add('overlay');
   } else {
     menu.classList.add('header__menu--close');
     menu.classList.remove('header__menu--open');
+    menuBtn.style.background = 'url(img/menu-open.svg) #0AD9C6 center no-repeat';
     page.classList.remove('overlay');
   }
 });
@@ -34,6 +36,7 @@ function contactSaveLocalStorage() {
 menuItem.forEach(b=>b.addEventListener('click', function() {
   menu.classList.add('header__menu--close');
   menu.classList.remove('header__menu--open');
+  menuBtn.style.background = 'url(img/menu-open.svg) #0AD9C6 center no-repeat';
   page.classList.remove('overlay');
   return;
 }));
