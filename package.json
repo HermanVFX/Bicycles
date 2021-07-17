@@ -1,11 +1,13 @@
 {
-  "name": "Liga-A-start-template",
+  "name": "wat",
   "version": "1.0.0",
   "description": "Стартовый шаблон сборки Лиги А",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
+    "eslint": "4.16.0",
+    "eslint-config-htmlacademy": "0.4.x",
     "gulp": "4.0.x",
     "gulp-csso": "^3.0.1",
     "gulp-imagemin": "^5.0.3",
@@ -20,9 +22,8 @@
     "pixel-glass": "^1.0.13",
     "posthtml-include": "^1.2.0",
     "stylelint": "9.10.x",
-    "stylelint-config-htmlacademy": "0.1.x",
-    "eslint": "4.16.0",
-    "eslint-config-htmlacademy": "0.4.x"
+    "stylelint-config-htmlacademy": "^0.1.10",
+    "xxxxx": "^1.0.3"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -51,5 +52,16 @@
   },
   "dependencies": {
     "del": "^4.1.1"
-  }
+  },
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HermanVFX/Makhiyanov_bicycles.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HermanVFX/Makhiyanov_bicycles/issues"
+  },
+  "homepage": "https://github.com/HermanVFX/Makhiyanov_bicycles#readme"
 }

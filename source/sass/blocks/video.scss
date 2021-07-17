@@ -22,6 +22,11 @@
     max-width: 929px;
     height: 293px;
     background-image: url(../img/bike-video.jpg);
+    background-image: -webkit-image-set(url(../img/bike-video.webp));
+    @media (min-resolution: 2dppx) {
+        background-image: url(../img/bike-video-x2.jpg);
+        background-image: -webkit-image-set(url(../img/bike-video-x2.webp) x2);
+    }
     margin: 56px auto auto auto;
     padding-top: 229px;
 }
@@ -88,7 +93,5 @@
     .video__play {
         width: 65px;
         height: 65px;
-        background-position: center;
-        background-size: 100%;
     }
 }

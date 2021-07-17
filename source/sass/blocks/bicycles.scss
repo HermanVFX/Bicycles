@@ -1,5 +1,5 @@
 .bicycles {
-    background-color:#F6F7F9;
+    background-color:$white-1;
     padding-top: 119px;
     padding-bottom: 127px;
     margin-top: 130px;
@@ -22,14 +22,7 @@
 }
 .bicycles__photo {
     position: relative;
-}
-.bicycles__photo p {
-    margin-top: 11px;
-}
-.bicycles__photo:first-child {
-    margin-top: 61px;
     img {
-        z-index: 2;
         position: relative;
     }
     &::after {
@@ -38,6 +31,17 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+    }
+}
+.bicycles__photo p {
+    margin-top: 11px;
+}
+.bicycles__photo:first-child {
+    margin-top: 61px;
+    img {
+        z-index: 2;
+    }
+    &::after {
         background-image: url(../img/ellipse-1.svg);
         width: 180px;
         height: 180px;
@@ -48,15 +52,7 @@
 }
 .bicycles__photo:nth-child(2n) {
     margin-top: 90px;
-    img {
-        position: relative;
-    }
     &::after {
-        content: '';
-        position: absolute;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
         background-image: url(../../img/rectangle-1.svg);
         width: 47px;
         height: 47px;
@@ -79,15 +75,7 @@
 }
 .bicycles__photo:last-child {
     margin-top: 51px;
-    img {
-        position: relative;
-    }
     &::after {
-        content: '';
-        position: absolute;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
         background-image: url(../img/ellipse-2.svg);
         width: 95px;
         height: 95px;
@@ -107,12 +95,6 @@
         justify-content: center;
         margin-top: 4px;
     }
-    .bicycles__photo {
-        position: relative;
-    }
-    .bicycles__photo p {
-        margin-top: 11px;
-    }
     .bicycles__photo:first-child {
         margin-top: 30px;
         margin-right: 25px;
@@ -125,7 +107,6 @@
         &::after {
             width: 127px;
             height: 127px;
-            z-index: 1;
             left: -38px;
             top: 202px;
         }
@@ -139,9 +120,7 @@
             height: 300px;
             object-fit: cover;
         }
-        &::after {
-            visibility: hidden;
-        }
+        &::after,
         &::before {
             visibility: hidden;
         }
@@ -175,19 +154,14 @@
         max-width: 320px;
         margin: 4px auto auto auto;
         flex-direction: column;
-        justify-content: center;
     }
     .bicycles__photo {
         width: 270px;
         margin: auto;
     }
-    .bicycles__photo p {
-        margin-top: 11px;
-    }
     .bicycles__photo:first-child {
         &::after {
             left: -25px;
-            top: 202px;
         }
     }
     .bicycles__photo:nth-child(2n) {
@@ -196,7 +170,6 @@
     .bicycles__photo:last-child {
         margin-top: 22px;
         &::after {
-            top: -21px;
             right: -14px;
         }
     }
