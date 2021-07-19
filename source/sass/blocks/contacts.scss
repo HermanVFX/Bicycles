@@ -99,9 +99,11 @@
 }
 
 @media (max-width: $mobile-width) {
-  .contacts__head {
-    font-size: 18px;
-    line-height: 30px;
+  .contacts {
+    h2 {
+      font-size: 18px;
+      line-height: 30px;
+    }
   }
 
   .contacts__title {
