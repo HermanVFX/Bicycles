@@ -24,12 +24,10 @@
 .video__insertion {
   max-width: 929px;
   height: 293px;
-  background-image: url("../img/bike-video.jpg"),
-    webkit-image-set(url("../img/bike-video.webp"));
+  background-image: url("../img/bike-video.jpg");
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/bike-video-x2.jpg"),
-      webkit-image-set(url("../img/bike-video-x2.webp") x2);
+    background-image: url("../img/bike-video-x2.jpg");
   }
 
   margin: 56px auto auto auto;
