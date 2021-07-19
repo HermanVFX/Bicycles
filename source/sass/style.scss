@@ -1,32 +1,36 @@
 // global
-@import 'global/normalize.scss';
-@import 'global/fonts.scss';
-@import 'global/variables.scss';
+@import "global/fonts.scss";
+@import "global/variables.scss";
 // blocks
-@import 'blocks/page.scss';
-@import 'blocks/header.scss';
-@import 'blocks/contacts.scss';
-@import 'blocks/top.scss';
-@import 'blocks/about.scss';
-@import 'blocks/bicycles.scss';
-@import 'blocks/video.scss';
+@import "blocks/page.scss";
+@import "blocks/header.scss";
+@import "blocks/contacts.scss";
+@import "blocks/top.scss";
+@import "blocks/about.scss";
+@import "blocks/bicycles.scss";
+@import "blocks/video.scss";
 
 .section-head {
-    text-align: center;
-    font-weight: 600;
+  text-align: center;
+  font-weight: 600;
 }
+
 .section-title {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .visibility-hidden {
-    visibility: hidden;
-    margin: 0;
-    padding: 0;
-    height: 0;
-    width: 0;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  width: 0;
 }
-.overlay {
+
+@media (max-width: $tablet-width) {
+  .overlay {
     overflow: hidden;
+  }
 }

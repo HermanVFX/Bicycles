@@ -1,123 +1,145 @@
 .contacts {
-    max-width: 957px;
-    margin: auto;
+  max-width: 957px;
+  margin: auto;
 }
+
 .contacts__head {
-    font-size: 30px;
+  font-size: 30px;
 }
+
 .contacts__title {
-    margin-bottom: 42px;
-    max-width: 550px;
-    font-size: 17px;
-    line-height: 31px;
-    margin-top: 24px;
+  margin-bottom: 42px;
+  max-width: 550px;
+  font-size: 17px;
+  line-height: 31px;
+  margin-top: 24px;
 }
+
 .contacts__links {
-    max-width: 532px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 34px auto 98px auto;
+  max-width: 532px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 34px auto 98px auto;
 }
+
 .contacts__link {
-    white-space: nowrap;
-    position: relative;
-    font-size: 16px;
-    line-height: 22px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    color: $gray-darck;
-    text-decoration: none;
-    padding-left: 25px;
-    transition: all 0.3s;
+  white-space: nowrap;
+  position: relative;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: $gray-darck;
+  text-decoration: none;
+  padding-left: 25px;
+  transition: all 0.3s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: -15px;
+  }
+
+  &--email::after {
+    background-image: url("../img/mail.svg");
+    width: 26px;
+    height: 20px;
+  }
+
+  &--phone::after {
+    background-image: url("../../img/phone.svg");
+    width: 21.5px;
+    height: 22.62px;
+  }
+
+  &:hover {
+    color: $green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .contacts__title {
+    margin-bottom: 20px;
+    margin-top: 0;
+    max-width: 629px;
+  }
+
+  .contacts__map {
+    padding-left: 35px;
+    padding-right: 35px;
+    height: 545px;
+  }
+
+  .contacts iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .contacts__links {
+    margin-top: 20px;
+    max-width: 538px;
+  }
+
+  .contacts__link {
+    padding-left: 32px;
+
     &::after {
-        content: '';
-        position: absolute;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        left: -15px;
+      left: -8px;
     }
-    &--email::after {
-        background-image: url(../img/mail.svg);
-        width: 26px;
-        height: 20px;
-    }
-    &--phone::after {
-        background-image: url(../../img/phone.svg);
-        width: 21.5px;
-        height: 22.62px;
-    }
-    &:hover {
-        color: $green;
-    }
-    &:active {
-        opacity: 0.3;
-    }
+  }
 }
 
-@media (max-width:$tablet-width) {
-    .contacts__title {
-        margin-bottom: 20px;
-        margin-top: 0px;
-        max-width: 629px;
-    }
-    .contacts__map {
-        padding-left: 35px;
-        padding-right: 35px;
-        height: 545px;
-    }
-    .contacts iframe {
-        width: 100%;
-        height: 100%;
-    }
-    .contacts__links {
-        margin-top: 20px;
-        max-width: 538px;
-    }
-    .contacts__link {
-        padding-left: 32px;
-        &::after {
-            left: -8px;
-        }
-    }
-}
+@media (max-width: $mobile-width) {
+  .contacts__head {
+    font-size: 18px;
+    line-height: 30px;
+  }
 
-@media (max-width:$mobile-width) {
-    .contacts__head {
-        font-size: 18px;
-        line-height: 30px;
+  .contacts__title {
+    margin-top: 20px;
+    max-width: 270px;
+  }
+
+  .contacts__map {
+    padding-left: 0;
+    padding-right: 0;
+    height: 250px;
+  }
+
+  .contacts__links {
+    margin-top: 31px;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .contacts__link {
+    margin-bottom: 22px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:first-child {
+      padding-left: 48px;
+
+      &::after {
+        left: 8px;
+      }
     }
-    .contacts__title {
-        margin-top: 20px;
-        max-width: 270px;
+
+    &:last-child {
+      padding-left: 24px;
+
+      &::after {
+        left: -11px;
+      }
     }
-    .contacts__map {
-        padding-left: 0px;
-        padding-right: 0px;
-        height: 250px;
-    }
-    .contacts__links {
-        margin-top: 31px;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .contacts__link {
-        margin-bottom: 22px;
-        margin-left: auto;
-        margin-right: auto;
-        &:first-child {
-            padding-left: 48px;
-            &::after {
-                left: 8px;
-            }
-        }
-        &:last-child {
-            padding-left: 24px;
-            &::after {
-                left: -11px;
-            }
-        }
-    }
+  }
 }

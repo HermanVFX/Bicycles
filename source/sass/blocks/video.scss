@@ -1,97 +1,112 @@
 .video {
-    background-color: #131314;
-    padding-top: 91px;
-    margin-bottom: 243px;
-    height: 616px;
-    color: $white;
+  background-color: #131314;
+  padding-top: 91px;
+  margin-bottom: 243px;
+  height: 616px;
+  color: $white;
 }
+
 .video__head {
-    font-size: 30px;
+  font-size: 30px;
 }
+
 .video__title {
-    max-width: 345px;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 28px;
-    text-align: center;
-    letter-spacing: -0.005em;
-    opacity: 0.7;
-    margin-top: -10px;
+  max-width: 345px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  opacity: 0.7;
+  margin-top: -10px;
 }
+
 .video__insertion {
-    max-width: 929px;
-    height: 293px;
-    background-image: url(../img/bike-video.jpg);
-    background-image: -webkit-image-set(url(../img/bike-video.webp));
-    @media (min-resolution: 2dppx) {
-        background-image: url(../img/bike-video-x2.jpg);
-        background-image: -webkit-image-set(url(../img/bike-video-x2.webp) x2);
-    }
-    margin: 56px auto auto auto;
-    padding-top: 229px;
+  max-width: 929px;
+  height: 293px;
+  background-image: url("../img/bike-video.jpg"),
+    webkit-image-set(url("../img/bike-video.webp"));
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bike-video-x2.jpg"),
+      webkit-image-set(url("../img/bike-video-x2.webp") x2);
+  }
+
+  margin: 56px auto auto auto;
+  padding-top: 229px;
 }
+
 .video__play {
-    display: block;
-    font-size: 0;
+  display: block;
+  font-size: 0;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: $green;
+  border: none;
+  margin: auto;
+  background-image: url("../img/play.svg");
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $green-darck;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .video {
+    padding-top: 48px;
+    margin-bottom: 153px;
+    height: 365px;
+  }
+
+  .video__head {
+    margin-bottom: 25px;
+  }
+
+  .video__title {
+    max-width: 429px;
+  }
+
+  .video__insertion {
+    margin-top: 38px;
+    max-width: 503px;
+    height: 186px;
+    padding-top: 96px;
+  }
+
+  .video__play {
+    width: 90.36px;
+    height: 90.36px;
+    background-position: center;
+    background-size: 100%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .video {
+    padding-top: 62px;
+    margin-bottom: 119px;
+    height: 322px;
+  }
+
+  .video__title {
+    max-width: 288px;
+  }
+
+  .video__insertion {
+    margin-top: 51px;
+    max-width: 288px;
+    height: 113.66px;
+    padding-top: 49px;
+  }
+
+  .video__play {
     width: 65px;
     height: 65px;
-    border-radius: 50%;
-    background-color: $green;
-    border: none;
-    margin: auto;
-    background-image: url(../img/play.svg);
-    transition: all 0.3s;
-    &:hover {
-        background-color: $green-darck;
-    }
-    &:active {
-        opacity: 0.3;
-    }
-}
-
-@media (max-width:$tablet-width) {
-    .video {
-        padding-top: 48px;
-        margin-bottom: 153px;
-        height: 365px;
-    }
-    .video__head {
-        margin-bottom: 25px;
-    }
-    .video__title {
-        max-width: 429px;
-    }
-    .video__insertion {
-        margin-top: 38px;
-        max-width: 503px;
-        height: 186px;
-        padding-top: 96px;
-    }
-    .video__play {
-        width: 90.36px;
-        height: 90.36px;
-        background-position: center;
-        background-size: 100%;
-    }
-}
-
-@media (max-width:$mobile-width) {
-    .video {
-        padding-top: 62px;
-        margin-bottom: 119px;
-        height: 322px;
-    }
-    .video__title {
-        max-width: 288px;
-    }
-    .video__insertion {
-        margin-top: 51px;
-        max-width: 288px;
-        height: 113.66px;
-        padding-top: 49px;
-    }
-    .video__play {
-        width: 65px;
-        height: 65px;
-    }
+  }
 }

@@ -1,197 +1,228 @@
 .top {
-    background-image: url(../img/bike-top.jpg);
-    background-image: -webkit-image-set(url(../img/bike-top.webp) 1x);
-    @media (min-resolution: 2dppx) {
-        background-image: url(../img/bike-top-x2.jpg);
-        background-image: -webkit-image-set(url(../img/bike-top-x2.webp) 2x);
-    }
-    background-color: $black;
+  background-image: url("../img/bike-top.jpg"),
+    webkit-image-set(url("../img/bike-top.webp"));
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bike-top-x2.jpg"),
+      webkit-image-set(url("../img/bike-top-x2.webp"));
+  }
+
+  background-color: $black;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 825px;
+}
+
+.top__wrapper {
+  padding-top: 325px;
+  max-width: 880px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  color: $white;
+}
+
+.top__title {
+  max-width: 393px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: -7px;
+    left: 0;
+    content: "";
+    width: 67.6px;
+    height: 20.28px;
+    background-image: url("../img/logo.svg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 825px;
+  }
 }
-.top__wrapper{
-    padding-top: 325px;
-    max-width: 880px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: auto;
-    color: $white;
-}
-.top__title {
-    max-width: 393px;
-    position: relative;
-    &::after {
-        position: absolute;
-        top: -7px;
-        left: 0;
-        content: '';
-        width: 67.6px;
-        height: 20.28px;
-        background-image: url(../img/logo.svg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-}
+
 .top__title h2 {
-    font-weight: bold;
-    font-size: 46px;
-    line-height: 64px;
-    letter-spacing: -0.005em;
-    margin-top: 43px;
-    margin-bottom: 25px;
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 64px;
+  letter-spacing: -0.01em;
+  margin-top: 43px;
+  margin-bottom: 25px;
 }
+
 .top__title p {
-    font-size: 20px;
-    line-height: 32px;
-    letter-spacing: -0.005em;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  color: $white;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+.top__form {
+  margin-top: -19px;
+  max-width: 327px;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    height: 54px;
+    padding-top: 5px;
+    background: $green;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 21px;
+    color: $black;
+    border: none;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $green-darck;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  input {
+    background: $white;
+    border: 1px solid $gray-light;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 14px 29px 10px 29px;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    color: $gray-darck;
+    margin-bottom: 17.5px;
+    transition: all 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $gray-light;
+      color: $gray-darck;
+    }
+
+    &:focus {
+      outline-color: $green;
+    }
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.01em;
     color: $white;
     mix-blend-mode: normal;
-    opacity: 0.8;
-    font-weight: 300;
-}
-.top__form {
-    margin-top: -19px;
-    max-width: 327px;
-    display: flex;
-    flex-direction: column;
-    button {
-        height: 54px;
-        padding-top: 5px;
-        background: $green;
-        border-radius: 6px;
-        font-weight: 600;
-        font-size: 15px;
-        line-height: 21px;
-        color: $black;
-        border: none;
-        transition: all 0.3s;
-        &:hover {
-            background-color: $green-darck;
-        }
-        &:active {
-            opacity: 0.3;
-        }
-    }
-    input {
-        background: $white;
-        border: 1px solid $gray-light;
-        box-sizing: border-box;
-        border-radius: 6px;
-        padding: 14px 29px 10px 29px;
-        font-weight: normal;
-        font-size: 15px;
-        line-height: 24px;
-        color: $gray-darck;
-        margin-bottom: 17.5px;
-        transition: all 0.3s;
-        &:hover {
-            cursor: pointer;
-            background-color: $gray-light;
-            color: $gray-darck;
-        }
-        &:focus {
-            outline-color: $green;
-        }
-    }
-    p {
-        font-weight: 600;
-        font-size: 17px;
-        line-height: 28px;
-        text-align: center;
-        letter-spacing: -0.005em;
-        color: $white;
-        mix-blend-mode: normal;
-        margin-bottom: 17.9px;
-    }
+    margin-bottom: 17.9px;
+  }
 }
 // Стили для JS
 .outline {
-    box-shadow: 0 0 0 3px $red;
+  box-shadow: 0 0 0 3px $red;
 }
 
-@media (max-width:$tablet-width) {
-    .top {
-        background-image: none;
-        background-color: transparent;
-        margin-top: -50px;
-        z-index: -1;
+@media (max-width: $tablet-width) {
+  .top {
+    background-image: none;
+    background-color: transparent;
+    margin-top: -50px;
+    z-index: -1;
+  }
+
+  .top__wrapper {
+    padding-top: 0;
+    max-width: 1439px;
+  }
+
+  .top__title {
+    max-width: 1439px;
+    height: 340px;
+    width: 100%;
+    text-align: center;
+    background-image: url("../img/bike-top.jpg"),
+      webkit-image-set(url("../img/bike-top.webp"));
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bike-top-x2.jpg"),
+        webkit-image-set(url("../img/bike-top-x2.webp"));
     }
-    .top__wrapper{
-        padding-top: 0px;
-        max-width: 1439px;
+
+    background-color: $black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::after {
+      background-image: none;
     }
-    .top__title {
-        max-width: 1439px;
-        height: 340px;
-        width: 100%;
-        text-align: center;
-        background-image: url(../img/bike-top.jpg);
-        background-image: -webkit-image-set(url(../img/bike-top.webp) 1x);
-        @media (min-resolution: 2dppx) {
-            background-image: url(../img/bike-top-x2.jpg);
-            background-image: -webkit-image-set(url(../img/bike-top-x2.webp) 2x);
-        }
-        background-color: $black;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        &::after {
-            background-image: none;
-        }
+  }
+
+  .top__title h2 {
+    margin-top: 135px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .top__title p {
+    font-size: 18px;
+    max-width: 435px;
+    margin: auto;
+  }
+
+  .top__form {
+    max-width: 321px;
+    margin: 52px auto 0 auto;
+
+    input {
+      padding: 12px 21px 12px 21px;
     }
-    .top__title h2 {
-        margin-top: 135px;
-        margin-bottom: 20px;
-        font-size: 30px;
-        line-height: 42px;
+
+    button {
+      height: 51px;
+      padding-top: 7px;
     }
-    .top__title p {
-        font-size: 18px;
-        max-width: 435px;
-        margin: auto;
-    }
-    .top__form {
-        max-width: 321px;
-        margin: 52px auto 0px auto;
-        input {
-            padding: 12px 21px 12px 21px;
-        }
-        button {
-            height: 51px;
-            padding-top: 7px;
-        }
-    }
-    .top__form p {
-        font-size: 18px;
-        margin-bottom: 30px;
-        color: $black;
-    }
+  }
+
+  .top__form p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: $black;
+  }
 }
 
-@media (max-width:$mobile-width) {
-    .top__title {
-        height: 390px;
-        background-image: url(../img/bike-top-mobile.jpg);
-        background-image: -webkit-image-set(url(../img/bike-top-mobile.webp) 1x);
-        @media (min-resolution: 2dppx) {
-            background-image: url(../img/bike-top-mobile-x2.jpg);
-            background-image: -webkit-image-set(url(../img/bike-top-mobile-x2.webp) 2x);
-        }
+@media (max-width: $mobile-width) {
+  .top__title {
+    height: 390px;
+    background-image: url("../img/bike-top-mobile.jpg"),
+      webkit-image-set(url("../img/bike-top-mobile.webp"));
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bike-top-mobile-x2.jpg"),
+        webkit-image-set(url("../img/bike-top-mobile-x2.webp"));
     }
-    .top__title h2 {
-        margin-top: 121px;
-    }
-    .top__title p {
-        max-width: 288px;
-    }
-    .top__form {
-        max-width: 286.35px;
-    }
-    .top__form p {
-        margin-bottom: 19px;
-    }
+  }
+
+  .top__title h2 {
+    margin-top: 121px;
+  }
+
+  .top__title p {
+    max-width: 288px;
+  }
+
+  .top__form {
+    max-width: 286.35px;
+  }
+
+  .top__form p {
+    margin-bottom: 19px;
+  }
 }

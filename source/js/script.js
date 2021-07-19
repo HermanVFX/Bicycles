@@ -1,12 +1,13 @@
 'use strict';
-const menuMobile = document.querySelector('.header__menu');
-const menuBtn = document.querySelector('.header__menu-button');
-const page = document.querySelector('.page');
-const menuItem = document.querySelectorAll('.header__menu-item');
-const contactName = document.getElementById('name');
-const contactPhone = document.getElementById('phone');
+var menuMobile = document.querySelector('.header__menu');
+var menuBtn = document.querySelector('.header__menu-button');
+var page = document.querySelector('.page');
+var menuItem = document.querySelectorAll('.header__menu-item');
+var contactName = document.getElementById('name');
+var contactPhone = document.getElementById('phone');
+var send = document.getElementById('send-button');
 // В случае загрузки JS добавит кнопку меню
-function onLoadPage() {
+(function () {
   if (menuMobile && menuBtn && page && menuItem) {
     menuBtn.classList.add('header__menu-button--close');
     menuMobile.classList.add('header__menu--close');
@@ -28,33 +29,33 @@ function onLoadPage() {
     });
 
     // Нажатие на пункты меню (закрытие меню)
-    menuItem.forEach(b=>b.addEventListener('click', function () {
-      menuMobile.classList.add('header__menu--close');
-      menuMobile.classList.remove('header__menu--open');
-      menuBtn.classList.remove('header__menu-button--open');
-      menuBtn.classList.add('header__menu-button--close');
-      page.classList.remove('overlay');
-      return;
-    }));
+    menuItem.forEach(function (entry) {
+      entry.addEventListener('click', function (event) {
+        event.preventDefault();
+        menuMobile.classList.add('header__menu--close');
+        menuMobile.classList.remove('header__menu--open');
+        menuBtn.classList.remove('header__menu-button--open');
+        menuBtn.classList.add('header__menu-button--close');
+        page.classList.remove('overlay');
+        return;
+      });
+    });
+    // Валидация формы
+    send.addEventListener('click', function () {
+      if (contactName && contactPhone) {
+        if (contactPhone.checkValidity() === true && contactName.checkValidity() === true) {
+          localStorage.setItem('email', contactName.value);
+          localStorage.setItem('phone', contactPhone.value);
+        } else {
+          contactPhone.classList.add('outline');
+          contactName.classList.add('outline');
+        }
+      }
+    });
   }
-}
-// Валидация формы
-function contactSaveLocalStorage() {
-  if (contactName && contactPhone) {
-    if (contactPhone.checkValidity() === true && contactName.checkValidity() === true) {
-      localStorage.setItem('email', contactName.value);
-      localStorage.setItem('phone', contactPhone.value);
-    } else {
-      contactPhone.classList.add('outline');
-      contactName.classList.add('outline');
-    }
-  }
-}
+})();
 // Не даю ввести в поле телефон ничего кроме цифр
-function numValidation(input) {
-  const value = input.value;
-  input.value = value.replace(/\D/g, '');
-}
-
-onLoadPage();
-numValidation();
+contactPhone.oninput = function () {
+  var value = contactPhone.value;
+  contactPhone.value = value.replace(/\D/g, '');
+};
