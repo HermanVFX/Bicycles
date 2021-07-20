@@ -9,11 +9,24 @@
 .about__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 1166px;
   text-align: center;
   padding: 0;
   margin: 44px auto auto auto;
+}
+
+.about__item:not(:first-child):not(:nth-child(4n)) {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.about__item:first-child {
+  margin-right: 16px;
+}
+
+.about__item:nth-child(4n) {
+  margin-left: 16px;
 }
 
 .about__item {
@@ -38,6 +51,19 @@
 @media (max-width: $tablet-width) {
   .about {
     margin-top: -100px;
+  }
+
+  .about__item:not(:first-child):not(:nth-child(4n)) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .about__item:first-child {
+    margin-right: 30px;
+  }
+
+  .about__item:nth-child(4n) {
+    margin-left: 30px;
   }
 
   .about__head {

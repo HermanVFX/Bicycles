@@ -1,41 +1,40 @@
 'use strict';
-var menuMobile = document.querySelector('.header__menu');
-var menuBtn = document.querySelector('.header__menu-button');
+var menuMobile = document.querySelector('.page-header__menu');
+var menuBtn = document.querySelector('.page-header__menu-button');
 var page = document.querySelector('.page');
-var menuItem = document.querySelectorAll('.header__menu-item');
+var menuItem = document.querySelectorAll('.page-header__menu-item');
 var contactName = document.getElementById('name');
 var contactPhone = document.getElementById('phone');
 var send = document.getElementById('send-button');
 // В случае загрузки JS добавит кнопку меню
 (function () {
   if (menuMobile && menuBtn && page && menuItem) {
-    menuBtn.classList.add('header__menu-button--close');
-    menuMobile.classList.add('header__menu--close');
+    menuBtn.classList.add('page-header__menu-button--close');
+    menuMobile.classList.add('page-header__menu--close');
     // Нажатие на кнопку открытия/закрытия меню
     menuBtn.addEventListener('click', function () {
-      if (menuMobile.classList.contains('header__menu--close')) {
-        menuMobile.classList.remove('header__menu--close');
-        menuMobile.classList.add('header__menu--open');
-        menuBtn.classList.remove('header__menu-button--close');
-        menuBtn.classList.add('header__menu-button--open');
+      if (menuMobile.classList.contains('page-header__menu--close')) {
+        menuMobile.classList.remove('page-header__menu--close');
+        menuMobile.classList.add('page-header__menu--open');
+        menuBtn.classList.remove('page-header__menu-button--close');
+        menuBtn.classList.add('page-header__menu-button--open');
         page.classList.add('overlay');
       } else {
-        menuMobile.classList.add('header__menu--close');
-        menuMobile.classList.remove('header__menu--open');
-        menuBtn.classList.remove('header__menu-button--open');
-        menuBtn.classList.add('header__menu-button--close');
+        menuMobile.classList.add('page-header__menu--close');
+        menuMobile.classList.remove('page-header__menu--open');
+        menuBtn.classList.remove('page-header__menu-button--open');
+        menuBtn.classList.add('page-header__menu-button--close');
         page.classList.remove('overlay');
       }
     });
 
     // Нажатие на пункты меню (закрытие меню)
     menuItem.forEach(function (entry) {
-      entry.addEventListener('click', function (event) {
-        event.preventDefault();
-        menuMobile.classList.add('header__menu--close');
-        menuMobile.classList.remove('header__menu--open');
-        menuBtn.classList.remove('header__menu-button--open');
-        menuBtn.classList.add('header__menu-button--close');
+      entry.addEventListener('click', function () {
+        menuMobile.classList.add('page-header__menu--close');
+        menuMobile.classList.remove('page-header__menu--open');
+        menuBtn.classList.remove('page-header__menu-button--open');
+        menuBtn.classList.add('page-header__menu-button--close');
         page.classList.remove('overlay');
         return;
       });

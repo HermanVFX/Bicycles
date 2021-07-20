@@ -9,7 +9,8 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 825px;
+  min-height: 825px;
+  height: max-content;
 }
 
 .top__wrapper {
@@ -25,6 +26,7 @@
 .top__title {
   max-width: 393px;
   position: relative;
+  height: max-content;
 
   &::after {
     position: absolute;
@@ -141,7 +143,8 @@
 
   .top__title {
     max-width: 1439px;
-    height: 340px;
+    min-height: 340px;
+    height: max-content;
     width: 100%;
     text-align: center;
     background-image: url("../img/bike-top.jpg");
@@ -196,7 +199,8 @@
 
 @media (max-width: $mobile-width) {
   .top__title {
-    height: 390px;
+    min-height: 390px;
+    height: max-content;
     background-image: url("../img/bike-top-mobile.jpg");
 
     @media (min-resolution: 2dppx) {

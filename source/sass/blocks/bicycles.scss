@@ -11,20 +11,24 @@
 }
 
 .bicycles__photos-block {
-  max-width: 1126px;
+  max-width: 1176px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   font-weight: 600;
   font-size: 22px;
   line-height: 34px;
   text-align: center;
   letter-spacing: -0.5px;
+  overflow: hidden;
 }
 
 .bicycles__photo {
   position: relative;
+  height: max-content;
 
   img {
     position: relative;
@@ -41,6 +45,9 @@
 
 .bicycles__photo p {
   margin-top: 11px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bicycles__photo:first-child {
@@ -62,6 +69,8 @@
 
 .bicycles__photo:nth-child(2n) {
   margin-top: 90px;
+  margin-left: 50px;
+  margin-right: 50px;
 
   &::after {
     background-image: url("../../img/rectangle-1.svg");
@@ -86,7 +95,7 @@
   }
 }
 
-.bicycles__photo:last-child {
+.bicycles__photo:nth-child(3n) {
   margin-top: 51px;
 
   &::after {
@@ -110,14 +119,14 @@
   }
 
   .bicycles__photos-block {
-    max-width: 590px;
+    max-width: 670px;
     justify-content: center;
     margin-top: 4px;
   }
 
   .bicycles__photo:first-child {
     margin-top: 30px;
-    margin-right: 25px;
+    margin-right: 50px;
 
     img {
       border-radius: 10px;
@@ -136,7 +145,8 @@
 
   .bicycles__photo:nth-child(2n) {
     margin-top: 30px;
-    margin-left: 25px;
+    margin-left: 0;
+    margin-right: 0;
 
     img {
       border-radius: 10px;
@@ -151,7 +161,7 @@
     }
   }
 
-  .bicycles__photo:last-child {
+  .bicycles__photo:nth-child(3n) {
     margin-top: 30px;
 
     img {
@@ -185,6 +195,9 @@
     max-width: 320px;
     margin: 4px auto auto auto;
     flex-direction: column;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .bicycles__photo {
@@ -193,16 +206,20 @@
   }
 
   .bicycles__photo:first-child {
+    margin: 29px auto auto auto;
+
     &::after {
       left: -25px;
     }
   }
 
   .bicycles__photo:nth-child(2n) {
+    margin: auto;
     margin-top: 21px;
   }
 
-  .bicycles__photo:last-child {
+  .bicycles__photo:nth-child(3n) {
+    margin: auto;
     margin-top: 22px;
 
     &::after {

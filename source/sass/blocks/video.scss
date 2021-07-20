@@ -1,9 +1,10 @@
 .video {
   background-color: #131314;
   padding-top: 91px;
-  margin-bottom: 243px;
-  height: 616px;
+  margin-bottom: 217px;
+  min-height: 616px;
   color: $white;
+  position: relative;
 }
 
 .video__head {
@@ -11,6 +12,7 @@
 }
 
 .video__title {
+  padding-bottom: 470px;
   max-width: 345px;
   font-weight: 300;
   font-size: 16px;
@@ -22,15 +24,25 @@
 }
 
 .video__insertion {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: -98px;
   max-width: 929px;
+  width: 100%;
   height: 293px;
   background-image: url("../img/bike-video.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/bike-video-x2.jpg");
   }
 
-  margin: 56px auto auto auto;
+  margin-top: 56px;
   padding-top: 229px;
 }
 
@@ -47,7 +59,8 @@
   transition: all 0.3s;
 
   &:hover {
-    background-color: $green-darck;
+    opacity: 0.8;
+    cursor: pointer;
   }
 
   &:active {
@@ -59,7 +72,7 @@
   .video {
     padding-top: 48px;
     margin-bottom: 153px;
-    height: 365px;
+    min-height: 365px;
   }
 
   .video__head {
@@ -68,10 +81,11 @@
 
   .video__title {
     max-width: 429px;
+    padding-bottom: 240px;
   }
 
   .video__insertion {
-    margin-top: 38px;
+    top: 157px;
     max-width: 503px;
     height: 186px;
     padding-top: 96px;
@@ -89,15 +103,16 @@
   .video {
     padding-top: 62px;
     margin-bottom: 119px;
-    height: 322px;
+    min-height: 322px;
   }
 
   .video__title {
     max-width: 288px;
+    padding-bottom: 170px;
   }
 
   .video__insertion {
-    margin-top: 51px;
+    top: 214px;
     max-width: 288px;
     height: 113.66px;
     padding-top: 49px;

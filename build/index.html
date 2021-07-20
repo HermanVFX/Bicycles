@@ -12,31 +12,31 @@
   <link rel="preload" href="fonts/open-sans-800.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/open-sans-regular.woff2" as="font" type="font/woff2" crossorigin="">
 </head>
-<body class="page__body">
+<body class="page-body">
 
   <!-- Шапка сайта -->
 
-  <header class="page__header header">
-    <div class="header__wrapper">
+  <header class="page-header">
+    <div class="page-header__wrapper">
 
       <!-- Логотип -->
 
-        <img src="img/logo.svg" alt="MOON - логотип" class="header__logo" width="67" height="20">
+        <img src="img/logo.svg" alt="MOON - логотип" class="page-header__logo" width="67" height="20">
 
       <!-- Меню -->
 
-      <nav class="header__menu">
-        <button type="button" class="header__menu-button">Открыть меню</button>
-        <ul class="header__menu-list">
-          <li class="header__menu-item"><a href="#about">О нас</a></li>
-          <li class="header__menu-item"><a href="#bicycles">Виды велосипедов</a></li>
-          <li class="header__menu-item"><a href="#video">Видео про велосипеды</a></li>
-          <li class="header__menu-item"><a href="#contacts">Контакты</a></li>
+      <nav class="page-header__menu">
+        <button type="button" class="page-header__menu-button">Открыть меню</button>
+        <ul class="page-header__menu-list">
+          <li class="page-header__menu-item"><a href="#about">О нас</a></li>
+          <li class="page-header__menu-item"><a href="#bicycles">Виды велосипедов</a></li>
+          <li class="page-header__menu-item"><a href="#video">Видео про велосипеды</a></li>
+          <li class="page-header__menu-item"><a href="#contacts">Контакты</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <main class="page__main main">
+  <main class="page-main">
 
     <!-- Заголовок -->
 
@@ -98,6 +98,8 @@
         <div class="bicycles__photo">
           <picture>
             <!-- 1х: 503px; 2x: 1006px -->
+            <source media="(max-width: 1023px)" srcset="img/bike-list-01-tablet.webp, img/bike-list-01-tablet-x2.webp 2x" type="image/webp">
+            <source media="(max-width: 1023px)" srcset="img/bike-list-01-tablet.jpg, img/bike-list-01-tablet-x2.jpg 2x">
             <source srcset="img/bike-list-01.webp, img/bike-list-01-x2.webp 2x" type="image/webp">
             <img src="img/bike-list-01.jpg" srcset="img/bike-list-01-x2.jpg 2x" alt="Дорожный велосипед" height="503" width="342">
           </picture>
@@ -106,6 +108,8 @@
         <div class="bicycles__photo">
           <picture>
             <!-- 1х: 566px; 2x: 1132px -->
+            <source media="(max-width: 1023px)" srcset="img/bike-list-02-tablet.webp, img/bike-list-02-tablet-x2.webp 2x" type="image/webp">
+            <source media="(max-width: 1023px)" srcset="img/bike-list-02-tablet.jpg, img/bike-list-02-tablet-x2.jpg 2x">
             <source srcset="img/bike-list-02.webp, img/bike-list-02-x2.webp 2x" type="image/webp">
             <img src="img/bike-list-02.jpg" srcset="img/bike-list-02-x2.jpg 2x" alt="Горный велосипед" height="566" width="342">
           </picture>
@@ -114,6 +118,8 @@
         <div class="bicycles__photo">
           <picture>
             <!-- 1х: 512px; 2x: 1024px -->
+            <source media="(max-width: 1023px)" srcset="img/bike-list-03-tablet.webp, img/bike-list-03-tablet-x2.webp 2x" type="image/webp">
+            <source media="(max-width: 1023px)" srcset="img/bike-list-03-tablet.jpg, img/bike-list-03-tablet-x2.jpg 2x">
             <source srcset="img/bike-list-03.webp, img/bike-list-03-x2.webp 2x" type="image/webp">
             <img src="img/bike-list-03.jpg" srcset="img/bike-list-03-x2.jpg 2x" alt="Детский велосипед" height="512" width="342">
           </picture>
@@ -139,17 +145,17 @@
 
   <!-- Подвал сайта -->
 
-  <footer class="page__footer footer">
+  <footer class="page-footer">
     <!-- Контакты -->
 
-    <div class="footer__contacts contacts" id="contacts">
+    <div class="page-footer__contacts contacts" id="contacts">
       <h2 class="contacts__head section-head">Как нас найти?</h2>
       <p class="contacts__title section-title">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
 
       <!-- Карта -->
 
       <div class="contacts__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124054!2d30.32089461621115!3d59.9387968690478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1626172823410!5m2!1sru!2sru" width="957" height="530" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe tabindex="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124054!2d30.32089461621115!3d59.9387968690478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1626172823410!5m2!1sru!2sru" width="957" height="530" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
 
       <div class="contacts__links">
