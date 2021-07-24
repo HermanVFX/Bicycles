@@ -12,23 +12,25 @@
 
 .bicycles__photos-block {
   max-width: 1176px;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 51px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(257px, max-content));
   justify-content: center;
+  grid-gap: 50px;
   font-weight: 600;
   font-size: 22px;
   line-height: 34px;
   text-align: center;
   letter-spacing: -0.5px;
-  overflow: hidden;
 }
 
 .bicycles__photo {
   position: relative;
   height: max-content;
+  width: fit-content;
 
   img {
     position: relative;
@@ -50,8 +52,9 @@
   margin-right: auto;
 }
 
-.bicycles__photo:first-child {
-  margin-top: 61px;
+.bicycles__photo:first-child,
+.bicycles__photo:nth-child(3n+1) {
+  margin-top: 11px;
 
   img {
     z-index: 2;
@@ -67,13 +70,12 @@
   }
 }
 
-.bicycles__photo:nth-child(2n) {
-  margin-top: 90px;
-  margin-left: 50px;
-  margin-right: 50px;
+.bicycles__photo:nth-child(2n):not(:nth-child(4n)):not(:nth-child(6n)),
+.bicycles__photo:nth-child(5n) {
+  margin-top: 39px;
 
   &::after {
-    background-image: url("../../img/rectangle-1.svg");
+    background-image: url("../img/rectangle-1.svg");
     width: 47px;
     height: 47px;
     top: -19px;
@@ -86,7 +88,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("../../img/rectangle-2.svg");
+    background-image: url("../img/rectangle-2.svg");
     width: 47px;
     height: 47px;
     right: -23px;
@@ -96,7 +98,7 @@
 }
 
 .bicycles__photo:nth-child(3n) {
-  margin-top: 51px;
+  // margin-top: 51px;
 
   &::after {
     background-image: url("../img/ellipse-2.svg");
@@ -120,11 +122,16 @@
 
   .bicycles__photos-block {
     max-width: 670px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: unset;
     justify-content: center;
-    margin-top: 4px;
+    margin-top: 0;
+    padding-top: 0;
   }
 
-  .bicycles__photo:first-child {
+  .bicycles__photo:first-child,
+  .bicycles__photo:nth-child(3n + 1) {
     margin-top: 30px;
     margin-right: 50px;
 
@@ -143,8 +150,9 @@
     }
   }
 
-  .bicycles__photo:nth-child(2n) {
-    margin-top: 30px;
+  .bicycles__photo:nth-child(2n):not(:nth-child(4n)):not(:nth-child(6n)),
+  .bicycles__photo:nth-child(5n) {
+    margin-top: 28px;
     margin-left: 0;
     margin-right: 0;
 
@@ -188,14 +196,13 @@
   }
 
   .bicycles__head {
-    margin-bottom: 0;
+    margin-bottom: 35px;
   }
 
   .bicycles__photos-block {
     max-width: 320px;
     margin: 4px auto auto auto;
-    flex-direction: column;
-    justify-content: center;
+    display: block;
     padding-left: 0;
     padding-right: 0;
   }
@@ -205,7 +212,8 @@
     margin: auto;
   }
 
-  .bicycles__photo:first-child {
+  .bicycles__photo:first-child,
+  .bicycles__photo:nth-child(3n + 1) {
     margin: 29px auto auto auto;
 
     &::after {
@@ -213,14 +221,16 @@
     }
   }
 
-  .bicycles__photo:nth-child(2n) {
-    margin: auto;
-    margin-top: 21px;
+  .bicycles__photo:nth-child(2n):not(:nth-child(4n)):not(:nth-child(6n)),
+  .bicycles__photo:nth-child(5n) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 43px;
   }
 
   .bicycles__photo:nth-child(3n) {
     margin: auto;
-    margin-top: 22px;
+    margin-top: 44px;
 
     &::after {
       right: -14px;

@@ -1,4 +1,5 @@
 .page-header {
+  height: min-content;
   width: 100%;
   margin-bottom: -100%;
   position: relative;
@@ -19,26 +20,14 @@
   margin: 0;
 }
 
-.page-header__menu-item:not(:first-child):not(:nth-child(4n)) {
-  margin-left: 69px;
-  margin-right: 69px;
-}
-
-.page-header__menu-item:not(:first-child) {
-  margin-left: 67px;
-}
-
-.page-header__menu-item:not(:nth-child(4n)) {
-  margin-right: 65px;
-}
-
 .page-header__menu-list {
   max-width: 847px;
   margin: -23px auto 0;
   padding: 0 23px 9px 19px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  grid-row-gap: 10px;
+  justify-content: space-between;
 }
 
 .page-header__menu-item {
