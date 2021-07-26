@@ -11,28 +11,30 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   max-width: 1166px;
+  width: 100%;
   text-align: center;
   padding: 0;
   margin: 44px auto auto auto;
 }
 
 .about__item:not(:first-child):not(:nth-child(4n)):not(:nth-child(4n+1)) {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 3%;
+  margin-right: 1%;
 }
 
 .about__item:first-child,
 .about__item:nth-child(4n+1) {
-  margin-right: 16px;
+  margin-right: 1%;
 }
 
 .about__item:nth-child(4n) {
-  margin-left: 16px;
+  margin-left: 3%;
 }
 
 .about__item {
   list-style: none;
   max-width: 263px;
+  width: 22%;
 }
 
 .about__item strong {
@@ -80,6 +82,7 @@
 
   .about__item {
     margin-bottom: 22px;
+    width: auto;
   }
 }
 

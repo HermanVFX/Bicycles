@@ -17,14 +17,15 @@
 
 .contacts__links {
   max-width: 573px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
   justify-content: center;
-  margin: 0 203px 0 auto;
+  grid-column-gap: 90px;
+  grid-row-gap: 20px;
+  margin: 0 203px 18px auto;
 }
 
 .contacts__link {
-  margin-bottom: 16px;
   white-space: nowrap;
   position: relative;
   font-size: 16px;
@@ -46,10 +47,10 @@
     left: 4px;
   }
 
-  &--email {
-    margin-right: 62px;
-    padding-right: 12px;
-  }
+  // &--email {
+  //   margin-right: 62px;
+  //   padding-right: 12px;
+  // }
 
   &--email::after {
     background-image: url("../img/mail.svg");
@@ -57,9 +58,9 @@
     height: 20px;
   }
 
-  &--phone {
-    margin-left: 12px;
-  }
+  // &--phone {
+  //   margin-left: 12px;
+  // }
 
   &--phone::after {
     background-image: url("../img/phone.svg");

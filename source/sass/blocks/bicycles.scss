@@ -12,12 +12,12 @@
 
 .bicycles__photos-block {
   max-width: 1176px;
-  padding-left: 80px;
-  padding-right: 80px;
   padding-top: 51px;
+  padding-left: 45px;
+  padding-right: 45px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(257px, max-content));
+  grid-template-columns: repeat(auto-fit, 29%);
   justify-content: center;
   grid-gap: 50px;
   font-weight: 600;
@@ -34,6 +34,9 @@
 
   img {
     position: relative;
+    max-width: 342px;
+    height: auto;
+    width: 100%;
   }
 
   &::after {
